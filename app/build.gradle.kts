@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.bullhorn"
-        minSdk = 26
+        minSdk = 28
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -45,4 +45,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("dev.hotwire:core:1.1.1")
+    implementation("dev.hotwire:navigation-fragments:1.1.1")
 }
