@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.bullhorn"
+    namespace = "com.example.bullhornxl"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.bullhorn"
+        applicationId = "com.example.bullhornxl"
         minSdk = 28
         targetSdk = 35
         versionCode = 1

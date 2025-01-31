@@ -1,4 +1,4 @@
-package com.example.bullhorn
+package com.example.bullhornxl
 
 import android.os.Bundle
 import dev.hotwire.navigation.activities.HotwireActivity

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bullhorn"
+rootProject.name = "BullhornXL"
 include(":app")
