@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.bullhornxl"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.bullhornxl"
@@ -30,8 +32,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11) // Use the JvmTarget enum
+            // If you have other options, they go here too
+            // For example:
+            // freeCompilerArgs.add("-Xopt-in=kotlin.RequiresOptIn")
+        }
     }
 }
 
@@ -45,6 +52,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("dev.hotwire:core:1.1.1")
-    implementation("dev.hotwire:navigation-fragments:1.1.1")
+    implementation(libs.hotwire.core)
+    implementation(libs.hotwire.navigation.fragments)
 }
